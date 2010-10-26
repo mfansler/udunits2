@@ -1,0 +1,17 @@
+IFLAGS=@RINC@
+CFLAGS=-Wall
+
+LDFLAGS=@LIBR@ @PKG_LIBS@
+
+DEPS = udunits2_R.o
+LIB = rudunits.so
+TEST = rudunits_test
+
+$(LIB) : $(DEPS)
+	$(CC) -shared -o $@ $<
+
+#.c.o :
+#	$(CC) $(IFLAGS) $(CFLAGS) -c $<
+
+$(TEST) : $(DEPS)
+	$(CC) $(LDFLAGS) -o $@ $<
