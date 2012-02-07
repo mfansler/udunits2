@@ -1,8 +1,8 @@
 Package: udunits2
 Type: Package
 Title: udunits-2 bindings for R
-Version: 0.5
-Date: 2011-02-11
+Version: 0.6
+Date: 2012-02-07
 Author: James Hiebert <hiebert@uvic.ca>
 Maintainer: James Hiebert <hiebert@uvic.ca>
 Description: This package provides simple bindings to version 2 of
@@ -10,6 +10,7 @@ Description: This package provides simple bindings to version 2 of
 SystemRequirements: udunits-2
 License: GPL-2
 LazyLoad: yes
-Packaged: 2011-02-11 20:34:39 UTC; james
+Depends: R (>= 2.10.0)
+Packaged: 2012-02-07 13:51:22 UTC; ripley
 Repository: CRAN
-Date/Publication: 2011-02-12 13:30:58
+Date/Publication: 2012-02-07 13:58:46
