@@ -1,0 +1,7 @@
+0.8: Moved runtime files to inst/share per Kurt Hornik's recommendation
+
+0.7: Updates to build to fix CRAN notes and Windows build issues
+  - Updated URLs in man pages
+  - Added .Rbuildignore file
+  - Updated configure script to be modeled after https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Configure-example
+  - Updated load.R and Makevars per suggestions by Brian Ripley and Uwe Ligges

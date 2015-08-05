@@ -1,6 +1,0 @@
-.onLoad<-function(libname,pkgname){
-  if (@HAVE_LIBUDUNITS2@)
-    library.dynam("udunits2",pkgname,libname)
-  else
-    stop("You don't have udunits installed.")
-}
