@@ -1,11 +1,11 @@
 a579dae161bf68e586c0fc560a72caf2 *CHANGELOG
 b234ee4d69f5fce4486a80fdaf4a4263 *COPYING
-72bb855d151cbb0c8c3fb2475a13c545 *DESCRIPTION
+6df20a06133a46364548d2e22f6a0da4 *DESCRIPTION
 ddb2c95b1290846c7c62cfcc8e495cd4 *NAMESPACE
 3d1f7405e2474c763bbb4fe97ed8b21c *R/ud.functions.R
 791501456a4d594e0f13c06d47ece833 *R/windows/load.R
-a60fd09abffd19e4194a5d8fdb056ef5 *configure
-1ac05da154d3b8aa9ccd13e49f966052 *configure.ac
+61a2bcd194b4f1b3996eb1c17884865c *configure
+3eb07f943f8e4d6afeb62b960750cff8 *configure.ac
 7f8d2733b4cb28c83122533c3e5cb131 *configure.win
 19fe3ee40514965d6ceece51e07ab39d *inst/share/udunits2-accepted.xml
 7d355c20b1ac56484045e8c94fcd4057 *inst/share/udunits2-base.xml
@@ -20,4 +20,5 @@ e43c1c1feecd4c73b0503c75ddb0cfed *man/ud.get.name.Rd
 9863f84db22c5190740ba44ce6d61859 *man/ud.set.encoding.Rd
 ed6398c8cf6678474399cadbb4c1b8ff *man/udunits2-package.Rd
 4ce4f79bef3aa9ee8d5a480b8b7bf04c *src/Makevars.in
+ab1406a4d5a6b11329231ab958ec5226 *src/Makevars.win
 9d7ae3c7962ec831f0285a05e8cc1022 *src/udunits2_R.c
