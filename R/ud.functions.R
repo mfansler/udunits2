@@ -1,3 +1,21 @@
+.onAttach <- function(libname, pkgname) {
+  ## By default, configure udunits with path set (presumably) by the
+  ## user through the UDUNITS2_XML_PATH environment variable
+  .C('R_ut_init')
+  if (!ud.have.unit.system()) {
+    ## Failing that, override it with the in-package XML file
+    p0 <- system.file("share/udunits2.xml", package="udunits2")
+    packageStartupMessage("Failed to load udunits2 system database: reading shipped version from ", p0)
+    Sys.setenv(UDUNITS2_XML_PATH=p0)
+    .C('R_ut_init')
+    ## If *that* fails, give the user some instructions for how to remedy
+    ## the problem
+    if (!ud.have.unit.system()) {
+      packageStartupMessage("Failed: udunits2 will not work properly. Please set the UDUNITS2_XML_PATH environment variable *before* attempting to load the package")
+    }
+  }
+}
+
 ud.are.convertible <-
 function(u1, u2) {
   if (! (ud.is.parseable(u1) && ud.is.parseable(u2))) {
@@ -65,4 +83,11 @@ function(enc.string) {
   .C('R_ut_set_encoding',
      as.character(enc.string))
   return()
+}
+
+ud.have.unit.system <-
+function() {
+  rv <- .C('R_ut_has_system',
+           exists=logical(1))
+  return(rv$exists)
 }

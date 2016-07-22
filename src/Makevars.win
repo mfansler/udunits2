@@ -1,1 +1,1 @@
-PKG_LIBS = -ludunits2 -lexpat 
+PKG_LIBS = -ludunits2 -lexpat

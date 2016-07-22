@@ -10,32 +10,37 @@ AC_ARG_WITH([udunits2-include],
     AS_HELP_STRING([--with-udunits2-include=DIR],
 		[location of the udunits2 header files]),
 		[udunits2_include_path=$withval])
-if test -n "$udunits2_include_path" ; then
+if test [ -n "$udunits2_include_path" ] ; then
    UD_CPPFLAGS="-I${udunits2_include_path}"
-elif test -n "${UDUNITS2_INCLUDE}" ; then
-   UD_CPPFLAGS="-I${UDUNITS2_INCLUDE}"
+else
+   if test [ -n "${UDUNITS2_INCLUDE}" ] ; then
+      UD_CPPFLAGS="-I{UDUNITS2_INCLUDE}"
+   fi
 fi
-## for AC_CHECK_HEADER below
-CPPFLAGS="${UD_CPPFLAGS} ${CPPFLAGS}"
 
 AC_ARG_WITH([udunits2-lib],
     AS_HELP_STRING([--with-udunits2-lib=DIR],
 		[location of the udunits2 libraries]),
 		[udunits2_lib_path=$withval])
-if test -n "$udunits2_lib_path" ; then
+if test [ -n "$udunits2_lib_path" ] ; then
    LIBS="-L${udunits2_lib_path} ${LIBS}"
-elif test -n "${UDUNITS2_LIBS}" ; then
-   LIBS="-L${UDUNITS2_LIBS} ${LIBS}"
+else
+   if test [ -n "${UDUNITS2_LIBS}" ] ; then
+      LIBS="-L${UDUNITS2_LIBS} ${LIBS}"
+   fi
 fi
 
-## this adds -expat to LIBS if found.
 AC_CHECK_LIB(expat,XML_ParserCreate,[],[],${LIBS})
+if test "${ac_cv_lib_expat_XML_ParserCreate}" == yes; then
+   LIBS="${LIBS} -lexpat "
+fi
+
+CPPFLAGS="${UD_CPPFLAGS} ${CPPFLAGS}"
 
 UD_ERROR=""
 AC_CHECK_HEADER(udunits2.h, [], UD_ERROR="udunits2.h not found")
-## this adds -ludunits2 to LIBS if found
 AC_CHECK_LIB(udunits2, ut_read_xml, [],
-             UD_ERROR="libudunits2 not found", ${LIBS})
+             UD_ERROR="libudunits2.a not found", ${LIBS})
 
 if test "${UD_ERROR}" != ""  ; then
     echo "-----Error: ${UD_ERROR}-----"
@@ -49,6 +54,8 @@ if test "${UD_ERROR}" != ""  ; then
     echo "     It is required for this package."
     exit 1
 fi
+
+LIBS="${LIBS} -ludunits2"
 
 AC_SUBST([LIBS])
 AC_SUBST([UD_CPPFLAGS])

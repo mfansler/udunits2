@@ -1,16 +1,18 @@
 Package: udunits2
 Type: Package
 Title: Udunits-2 Bindings for R
-Version: 0.8.1
-Date: 2015-09-22
+Version: 0.11
+Date: 2016-07-22
 Author: James Hiebert <hiebert@uvic.ca>
 Maintainer: James Hiebert <hiebert@uvic.ca>
-Description: Provides simple bindings to version 2 of Unidata's udunits library.
+Description: Provides simple bindings to Unidata's udunits library.
+URL: https://github.com/pacificclimate/Rudunits2
+        https://www.unidata.ucar.edu/software/udunits/
 SystemRequirements: udunits-2
 License: GPL-2
 LazyLoad: yes
 Depends: R (>= 2.10.0)
-Packaged: 2015-09-22 06:24:58 UTC; ripley
 NeedsCompilation: yes
+Packaged: 2016-07-22 05:32:52 UTC; hiebert
 Repository: CRAN
-Date/Publication: 2015-09-22 20:08:03
+Date/Publication: 2016-07-22 18:51:39
