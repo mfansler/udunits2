@@ -1,12 +1,12 @@
 63cbb5f8bce12afaaaeea5216d9f6e75 *CHANGELOG
 b234ee4d69f5fce4486a80fdaf4a4263 *COPYING
-898716391555323346cf8bcfefe69258 *DESCRIPTION
+eda23bc25525957d387f9dae4aa480a7 *DESCRIPTION
 6bb2e6c2fc25c12c1cf87805af03ebab *NAMESPACE
 eb286258b1742184b8dd52ff50ed23cb *R/ud.functions.R
 791501456a4d594e0f13c06d47ece833 *R/windows/load.R
 30659892ef52fc7a122e379ded0bbadf *cleanup
-28902e99370c4c9349b2e8817f9256a7 *configure
-f847d1bfbaa14bbf4f3f5c69248440c1 *configure.ac
+632d7f92f175249afded351af8e7b43a *configure
+ed964c863e199f966f446656a5154a9b *configure.ac
 26f28956899a13203f9d11baf0f03a1d *inst/share/udunits2-accepted.xml
 cf5342a71d0250353fda59ad83c35a9e *inst/share/udunits2-base.xml
 92b3d24d148513296f9f24449373ddfb *inst/share/udunits2-common.xml
