@@ -1,6 +1,6 @@
 a48792c10158884623d520dcf23b2011 *CHANGELOG
 b234ee4d69f5fce4486a80fdaf4a4263 *COPYING
-815fca238c5409a7deb5a88ab76ccaad *DESCRIPTION
+7b8abf8edc9bcc587d3d8b18790df0e7 *DESCRIPTION
 6bb2e6c2fc25c12c1cf87805af03ebab *NAMESPACE
 eb286258b1742184b8dd52ff50ed23cb *R/ud.functions.R
 791501456a4d594e0f13c06d47ece833 *R/windows/load.R
@@ -21,6 +21,7 @@ ca3b7917bcf9ef89c557ece7f3f6190b *man/ud.is.parseable.Rd
 752609c25b3ea5bc9b68c329664e56dc *man/ud.set.encoding.Rd
 fed59c878f9be4120cd60e001f2eb3eb *man/udunits2-package.Rd
 4ce4f79bef3aa9ee8d5a480b8b7bf04c *src/Makevars.in
+4fed4964d4c9ba9ac7ef294e5d31c123 *src/Makevars.ucrt
 62169d3322c68afbf85eb710cab586dc *src/Makevars.win
 ba1895c285923cb83086fcc7fbe5195f *src/init.c
 69b29aa0ee659ed84ce9be33d672ea35 *src/udunits2_R.c
