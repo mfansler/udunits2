@@ -1,14 +1,2 @@
-PKG_LIBS = -ludunits2 -lexpat
-
-all: clean winlibs
-
-winlibs:
-	mkdir -p ../inst
-	rm -Rf ../inst/share
-	mkdir -p ../inst/share/udunits
-	cp -r $(R_TOOLS_SOFT)/share/udunits/* ../inst/share/udunits
-
-clean:
-	rm -Rf $(SHLIB) $(OBJECTS)
-
-.PHONY: all winlibs clean
+PKG_LIBS = -L$(LIBRARY_LIB) -ludunits2 -lexpat
+PKG_CPPFLAGS = -I$(LIBRARY_INC)
